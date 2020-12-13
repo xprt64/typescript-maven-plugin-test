@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>gica</groupId>
+    <artifactId>typescript-test</artifactId>
+    <version>1.1-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.xprt64</groupId>
+            <artifactId>cqrs</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
+        </dependency>
+    </dependencies>
+    <build>
+<!--        <sourceDirectory>src/main/java</sourceDirectory>-->
+        <!-- To use the plugin goals in your POM or parent POM -->
+        <plugins>
+            <plugin>
+                <groupId>com.github.xprt64</groupId>
+                <artifactId>cqrs-java-export-typescript-dtos</artifactId>
+                <version>1.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>dependency-counter</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <subClassesOf>
+                        <class>com.cqrs.base.Command</class>
+                        <class>com.cqrs.base.Event</class>
+                        <class>gica.base.Query</class>
+                    </subClassesOf>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,10 @@
+gica/utilizator/Stare.class
+gica/commands/CreazaUtilizatorNou.class
+gica/queries/CareEsteNumeleUtilizatorului.class
+gica/base/Query.class
+gica/base/Nullable.class
+gica/utilizator/NumeComplet.class
+gica/commands/CreeazaArticolNou.class
+gica/Main.class
+gica/articol/NumeComplet.class
+gica/base/AnsweredQuery.class
